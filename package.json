@@ -1,0 +1,19 @@
+{
+  "name": "wrangler-cloudflare-durable-objects-queue",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.2.8",
+    "@cloudflare/workers-types": "^4.20240502.0",
+    "typescript": "^5.4.5",
+    "vitest": "1.3.0",
+    "wrangler": "^3.55.0"
+  }
+}
