@@ -1,0 +1,17 @@
+name = "my-worker"
+main = "src/index.ts"
+compatibility_date = "2024-05-13"
+compatibility_flags = ["nodejs_compat"]
+
+[[queues.producers]]
+queue = "my-queue"
+binding = "MY_QUEUE"
+
+[durable_objects]
+bindings = [
+  { name = "MY_DO_NAMESPACE", class_name = "MyDurableObject" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["MyDurableObject"]
